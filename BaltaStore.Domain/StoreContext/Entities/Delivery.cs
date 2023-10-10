@@ -14,5 +14,15 @@ namespace BaltaStore.Domain.StoreContext.Entities
             EstimatedDeliveryDate = estimatedDeliveryDate;
             Status = EDeliveryStatus.Waiting;
         }
+
+        public void Ship()
+        {
+            Status = EDeliveryStatus.Shipped;
+        }
+
+        public void Cancel()
+        {
+            Status = EDeliveryStatus.Canceled;
+        }
     }
 }
